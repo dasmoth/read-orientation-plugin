@@ -1,0 +1,51 @@
+<DASSTYLE>
+  <STYLESHEET>
+    <CATEGORY id="default">
+      <TYPE id="default" method="zeroq">
+        <GLYPH>
+        <ANCHORED_ARROW>
+          <HEIGHT>4</HEIGHT>
+          <FGCOLOR>orange</FGCOLOR>
+        </ANCHORED_ARROW>
+        </GLYPH>
+       </TYPE>
+       <TYPE id="default" method="correctly-paired">
+        <GLYPH>
+        <ANCHORED_ARROW>
+          <HEIGHT>4</HEIGHT>
+          <FGCOLOR>blue</FGCOLOR>
+        </ANCHORED_ARROW>
+        </GLYPH>
+       </TYPE>
+       <TYPE id="default" method="unpaired">
+        <GLYPH>
+        <ANCHORED_ARROW>
+          <HEIGHT>4</HEIGHT>
+          <FGCOLOR>green</FGCOLOR>
+        </ANCHORED_ARROW>
+        </GLYPH>
+       </TYPE>
+       <TYPE id="default" method="parallel">
+        <GLYPH>
+        <ANCHORED_ARROW>
+          <HEIGHT>4</HEIGHT>
+          <FGCOLOR>brown</FGCOLOR>
+        </ANCHORED_ARROW>
+        </GLYPH>
+       </TYPE>
+       <TYPE id="default">
+        <GLYPH>
+        <ANCHORED_ARROW>
+          <HEIGHT>4</HEIGHT>
+          <FGCOLOR>gray</FGCOLOR>
+        </ANCHORED_ARROW>
+        </GLYPH>
+       </TYPE>
+       <TYPE id="readpair">
+        <GLYPH>
+        <LINE/>
+        </GLYPH>
+       </TYPE>
+    </CATEGORY>
+  </STYLESHEET>
+</DASSTYLE>
