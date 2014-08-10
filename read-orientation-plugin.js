@@ -20,12 +20,14 @@ function readOrientationPlugin(featureSets) {
         var feature = features[fi];
         var flags = feature.bamRecord.flag;
 
-        if (feature.bamRecord.mq == 0) {
+        if (feature.bamRecord.segment != feature.bamRecord.nextSegment) {
+            feature.method = 'paired-other';
+        } else if (feature.bamRecord.mq == 0) {
             feature.method = 'zeroq';
-        } else if ((flags & BamFlags.MULTIPLE_SEGMENTS) && (flags & BamFlags.ALL_SEGMENTS_ALIGN)) {
-            feature.method = 'correctly-paired';
         } else if (flags & BamFlags.NEXT_SEGMENT_UNMAPPED) {
             feature.method = 'unpaired';
+        } else if ((flags & BamFlags.MULTIPLE_SEGMENTS) && (flags & BamFlags.ALL_SEGMENTS_ALIGN)) {
+            feature.method = 'correctly-paired';
         } else if (!(flags & BamFlags.ALL_SEGMENTS_ALIGN) && 
             (((flags & BamFlags.REVERSE_COMPLEMENT) && (flags & BamFlags.NEXT_REVERSE_COMPLEMENT)) ||
              (!(flags & BamFlags.REVERSE_COMPLEMENT) && !(flags & BamFlags.NEXT_REVERSE_COMPLEMENT)))) {

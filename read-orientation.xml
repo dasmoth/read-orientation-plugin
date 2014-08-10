@@ -25,6 +25,14 @@
         </ANCHORED_ARROW>
         </GLYPH>
        </TYPE>
+       <TYPE id="default" method="paired-other">
+        <GLYPH>
+        <ANCHORED_ARROW>
+          <HEIGHT>4</HEIGHT>
+          <FGCOLOR>red</FGCOLOR>
+        </ANCHORED_ARROW>
+        </GLYPH>
+       </TYPE>
        <TYPE id="default" method="parallel">
         <GLYPH>
         <ANCHORED_ARROW>
